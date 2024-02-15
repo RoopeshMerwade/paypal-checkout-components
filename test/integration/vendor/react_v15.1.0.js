@@ -3192,7 +3192,7 @@
              * @param {function} listener The callback to store.
              */
             putListener: function (inst, registrationName, listener) {
-              !(typeof listener === "function")
+              !(typeof listener !== "function")
                 ? "development" !== "production"
                   ? invariant(
                       false,
@@ -24145,7 +24145,7 @@
                 : invariant(false)
               : void 0;
 
-            !(typeof length === "number")
+            !(typeof length !== "number")
               ? "development" !== "production"
                 ? invariant(false, "toArray: Object needs a length property")
                 : invariant(false)
